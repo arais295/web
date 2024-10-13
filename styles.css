@@ -1,0 +1,240 @@
+/* Global box-sizing for all elements */
+* {
+    box-sizing: border-box;
+}
+
+body {  
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    position: relative;
+    background-image: url('images/header1.jpg'); /* Fondo del header */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+}
+
+/* Superposición blanquesina */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(16, 16, 16, 0.5); /* Superposición blanca más suave */
+    z-index: 1;
+}
+
+.header-content {
+    display: flex;
+    justify-content: flex-start; /* Alinea logo y texto hacia la izquierda */
+    align-items: center;
+    height: 100%;
+    padding: 0 4rem; /* Mantén el padding lateral para darle espacio */
+    position: relative;
+    z-index: 2; /* Coloca el contenido por encima de la superposición */
+}
+
+.logo {
+    width: 400px; /* Aumenta el tamaño del logo */
+    height: auto;
+    margin-right: 2rem; /* Añade espacio entre el logo y el texto */
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin: 0; /* Asegúrate de que no haya márgenes que desplacen el texto */
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+/* Estilos para las secciones de productos y carrito */
+.product-list, .cart {
+    width: 45%;
+}
+
+.product, .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos específicos del carrito */
+.cart {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de los botones */
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Total del carrito */
+.cart-total {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-align: right;
+}
+
+.empty-cart {
+    text-align: center;
+    color: gray;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 2rem; /* Agregado para separar el footer del contenido */
+}
+
+/* Footer container */
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye las columnas de manera equitativa */
+    background-color: #111; /* Fondo oscuro */
+    padding: 2rem;
+    color: white;
+    text-align: left;
+    align-items: flex-start; /* Alinea los elementos al principio de cada columna */
+}
+
+.footer-column {
+    width: 23%; /* Ajusta el ancho de cada columna */
+}
+
+.footer-column img.logo-footer {
+    width: 325px; /* Ajusta el tamaño del logo del footer */
+    height: auto;
+    display: block; /* Para que el logo se comporte como un bloque */
+    margin-top: -65px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #0097B2; /* Color para los títulos */
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    color: #0097B2; /* Color del texto de los links */
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Asegura que los íconos de redes sociales estén alineados */
+.footer-column ul li a i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: #0097B2;
+}
+
+.footer-column ul li a i:hover {
+    color: #9f1010; /* Cambia el color al pasar el mouse */
+}
+
+.footer-column p {
+    color: #bbb; /* Color para texto adicional */
+}
+
+/*Se modifica lo que está al final del foooter, "© 2024 Your E-Commerce Store. All rights reserved." */
+footer p {
+    background-color: #585757; /* Cambia el fondo a un color más claro */
+    padding: 1rem 0;
+    margin: 0;
+}
+
+/* Main container */
+.main-container {
+    display: flex;
+    padding: 2rem;
+}
+
+/* Filter Section */
+.filter-section {
+    width: 25%;
+    background-color: #f2f2f2;
+    padding: 1rem;
+    margin-right: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filter-section h2 {
+    margin-top: 0;
+}
+
+.filter-category {
+    margin-bottom: 1.5rem;
+}
+
+.filter-category h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Product List */
+.product-list {
+    width: 75%;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100px;
+    height: auto;
+    margin-right: 2rem;
+}

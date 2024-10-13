@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple E-Commerce</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <img src="images/Logo2.png" alt="Logo" class="logo">
+        <h1>Welcome to Our E-Commerce Store</h1>
+    </div>
+</header>
+
+<!-- Contenedor Principal con Filtros -->
+<div class="main-container">
+    <!-- Menú de Filtros -->
+    <aside class="filter-section">
+        <h2>Filtrar por</h2>
+        <div class="filter-category">
+            <h3>Categorías</h3>
+            <ul>
+                <li><input type="checkbox" name="category" value="Frutas"> Frutas</li>
+                <li><input type="checkbox" name="category" value="Abarrotes"> Abarrotes</li>
+                <li><input type="checkbox" name="category" value="Lácteos"> Lácteos</li>
+            </ul>
+        </div>
+
+        <div class="filter-category">
+            <h3>Precio</h3>
+            <input type="range" min="0" max="1000" step="50">
+        </div>
+
+        <div class="filter-category">
+            <h3>Marca</h3>
+            <ul>
+                <li><input type="checkbox" name="brand" value="Brand 1"> Yogurísimo</li>
+                <li><input type="checkbox" name="brand" value="Brand 2"> Serenísima</li>
+                <li><input type="checkbox" name="brand" value="Brand 3"> SanCor</li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Sección de Productos -->
+    <div class="product-list">
+        <h2>Productos</h2>
+        <div class="product">
+            <img src="images/frutas/naranjas.jpg" alt="Product 1">
+            <div>
+                <h3>Product 1</h3>
+                <p>Marca: Brand 1</p>
+                <p>$10.00</p>
+            </div>
+            <button onclick="addToCart('Product 1', 10)">Agregar al carrito</button>
+        </div>
+
+        <div class="product">
+            <img src="images/frutas/platano.jpg" alt="Product 2">
+            <div>
+                <h3>Product 2</h3>
+                <p>Marca: Brand 2</p>
+                <p>$20.00</p>
+            </div>
+            <button onclick="addToCart('Product 2', 20)">Agregar al carrito</button>
+        </div>
+
+        <div class="product">
+            <img src="images/frutas/zandia.jpg" alt="Product 3">
+            <div>
+                <h3>Product 3</h3>
+                <p>Marca: Brand 3</p>
+                <p>$15.00</p>
+            </div>
+            <button onclick="addToCart('Product 3', 15)">Agregar al carrito</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <img src="images/Logo2.png" alt="Logo" class="logo-footer">
+        </div>
+        <div class="footer-column">
+            <h3>Menú</h3>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Servicios</h3>
+            <ul>
+                <li><a href="#">Envíos</a></li>
+                <li><a href="#">Devoluciones</a></li>
+                <li><a href="#">Soporte</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Contacto</h3>
+            <ul>
+                <li><a href="mailto:contacto@tuempresa.com">contacto@tuempresa.com</a></li>
+                <li><a href="tel:+123456789">(123) 456-789</a></li>
+                <li>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p>&copy; 2024 Your E-Commerce Store. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
